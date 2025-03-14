@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohbet Geçmişi - Burak Yalçın</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background: var(--bg-color);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .login-form input {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background: var(--input-bg);
+            color: var(--text-color);
+        }
+
+        .login-form button {
+            padding: 10px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-form button:hover {
+            background: var(--primary-color-hover);
+        }
+
+        .error-message {
+            color: #ff4444;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .chat-history {
+            display: none;
+        }
+
+        .chat-session {
+            background: var(--bg-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .session-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .message {
+            display: flex;
+            margin: 10px 0;
+            align-items: flex-start;
+        }
+
+        .bot-message {
+            flex-direction: row;
+        }
+
+        .user-message {
+            flex-direction: row-reverse;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 10px 15px;
+            border-radius: 15px;
+            margin: 0 10px;
+        }
+
+        .bot-message .message-content {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .user-message .message-content {
+            background: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .bot-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .timestamp {
+            font-size: 0.8em;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background: var(--primary-color-hover);
+        }
+
+        .logout-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff4444;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .logout-button:hover {
+            background: #cc3333;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Giriş Formu -->
+        <div id="loginContainer" class="login-container">
+            <h2 style="text-align: center; margin-bottom: 20px;">Yönetici Girişi</h2>
+            <form class="login-form" id="loginForm">
+                <input type="email" id="email" placeholder="E-posta" required>
+                <input type="password" id="password" placeholder="Şifre" required>
+                <p class="error-message" id="errorMessage"></p>
+                <button type="submit">Giriş Yap</button>
+            </form>
+        </div>
+
+        <!-- Sohbet Geçmişi -->
+        <div id="chatHistory" class="chat-history">
+            <div class="header-actions">
+                <a href="index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Ana Sayfaya Dön
+                </a>
+                <button class="logout-button" id="logoutButton">
+                    <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                </button>
+            </div>
+            <h1>Sohbet Geçmişi</h1>
+            <div id="chatSessions"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginContainer = document.getElementById('loginContainer');
+            const chatHistory = document.getElementById('chatHistory');
+            const loginForm = document.getElementById('loginForm');
+            const errorMessage = document.getElementById('errorMessage');
+            const logoutButton = document.getElementById('logoutButton');
+
+            // Başlangıçta giriş formunu göster
+            loginContainer.style.display = 'block';
+            chatHistory.style.display = 'none';
+
+            // Giriş formu işleme
+            loginForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                try {
+                    const response = await fetch('http://localhost:3000/api/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ email, password })
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        localStorage.setItem('token', data.token);
+                        loginContainer.style.display = 'none';
+                        chatHistory.style.display = 'block';
+                        loadChatHistory();
+                    } else {
+                        errorMessage.textContent = data.error || 'Giriş başarısız';
+                        errorMessage.style.display = 'block';
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    errorMessage.textContent = 'Bir hata oluştu. Lütfen tekrar deneyin.';
+                    errorMessage.style.display = 'block';
+                }
+            });
+
+            // Çıkış yapma işlemi
+            logoutButton.addEventListener('click', () => {
+                localStorage.removeItem('token');
+                loginContainer.style.display = 'block';
+                chatHistory.style.display = 'none';
+            });
+
+            // Sohbet geçmişini yükle
+            async function loadChatHistory() {
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    loginContainer.style.display = 'block';
+                    chatHistory.style.display = 'none';
+                    return;
+                }
+
+                try {
+                    const response = await fetch('http://localhost:3000/api/chat-history', {
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+
+                    if (!response.ok) {
+                        if (response.status === 401) {
+                            localStorage.removeItem('token');
+                            loginContainer.style.display = 'block';
+                            chatHistory.style.display = 'none';
+                            return;
+                        }
+                        throw new Error('Sohbet geçmişi alınamadı');
+                    }
+
+                    const history = await response.json();
+                    const chatSessions = document.getElementById('chatSessions');
+                    chatSessions.innerHTML = '';
+
+                    if (!history || history.length === 0) {
+                        chatSessions.innerHTML = '<p>Henüz sohbet geçmişi bulunmuyor.</p>';
+                        return;
+                    }
+
+                    history.forEach((session, index) => {
+                        const sessionDiv = document.createElement('div');
+                        sessionDiv.className = 'chat-session';
+
+                        const header = document.createElement('div');
+                        header.className = 'session-header';
+                        header.innerHTML = `
+                            <h3>Oturum #${history.length - index}</h3>
+                            <span>${new Date(session.timestamp).toLocaleString('tr-TR')}</span>
+                        `;
+
+                        const messages = document.createElement('div');
+                        messages.className = 'session-messages';
+
+                        session.messages.forEach(msg => {
+                            const messageDiv = document.createElement('div');
+                            messageDiv.className = `message ${msg.sender}-message`;
+
+                            if (msg.sender === 'bot') {
+                                const avatar = document.createElement('img');
+                                avatar.src = 'assets/ates-avatar.png';
+                                avatar.alt = 'Ateş Avatar';
+                                avatar.className = 'bot-avatar';
+                                messageDiv.appendChild(avatar);
+                            }
+
+                            const content = document.createElement('div');
+                            content.className = 'message-content';
+                            content.textContent = msg.message;
+
+                            const timestamp = document.createElement('div');
+                            timestamp.className = 'timestamp';
+                            timestamp.textContent = new Date(msg.timestamp).toLocaleTimeString('tr-TR');
+
+                            const contentWrapper = document.createElement('div');
+                            contentWrapper.appendChild(content);
+                            contentWrapper.appendChild(timestamp);
+
+                            messageDiv.appendChild(contentWrapper);
+                            messages.appendChild(messageDiv);
+                        });
+
+                        sessionDiv.appendChild(header);
+                        sessionDiv.appendChild(messages);
+                        chatSessions.appendChild(sessionDiv);
+                    });
+                } catch (error) {
+                    console.error('Error:', error);
+                    chatSessions.innerHTML = '<p>Sohbet geçmişi yüklenirken bir hata oluştu.</p>';
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

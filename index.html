@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burak YALÇIN</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <link rel="apple-touch-icon" href="assets/images/logo.svg">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Computer Science & Engineering student, AI developer, and Software Engineer. Creating innovative solutions with technology.">
+    <meta name="keywords" content="Burak YALÇIN, Software Engineer, AI Developer">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="mouseTrail"></canvas>
+    <div class="particles-container">
+        <!-- AI & Tech -->
+        <div class="particle ai large">🤖</div>
+        <div class="particle ai">🤖</div>
+        <div class="particle tech large">💻</div>
+        <div class="particle tech">💻</div>
+        <div class="particle tech small">⌨️</div>
+        
+        <!-- Music -->
+        <div class="particle music large">🎸</div>
+        <div class="particle music">🎼</div>
+        <div class="particle music small">🎵</div>
+        
+        <!-- Repair & Tools -->
+        <div class="particle repair large">🔧</div>
+        <div class="particle repair">⚡</div>
+        <div class="particle repair small">🔨</div>
+        
+        <!-- Content Creation -->
+        <div class="particle content large">🎥</div>
+        <div class="particle content">📱</div>
+        <div class="particle content small">📷</div>
+        
+        <!-- Code -->
+        <div class="particle code large">{ }</div>
+        <div class="particle code">&lt;/&gt;</div>
+        <div class="particle code small">#</div>
+        
+        <!-- Binary & Data -->
+        <div class="particle binary large">01</div>
+        <div class="particle binary">10</div>
+        <div class="particle binary small">00</div>
+        
+        <!-- Circuit & Tech -->
+        <div class="particle circuit large">⚡</div>
+        <div class="particle circuit">🔌</div>
+        <div class="particle circuit small">💡</div>
+    </div>
+    <div class="container-fluid p-0">
+        <main class="card-container">
+            <!-- Name Card -->
+            <div class="card name-card" data-aos="fade-up" data-modal="name-modal">
+                <div class="card-body text-center">
+                    <div class="card-logo">
+                        <img src="assets/images/logo.svg" alt="Logo">
+                    </div>
+                    <div class="card-profile-image">
+                        <img src="assets/images/profileimage.svg" alt="Burak YALÇIN">
+                    </div>
+                    <h1><span class="main-title">Burak YALÇIN</span></h1>
+                    <p><span class="subtitle">Computer Science & Engineering Student</span></p>
+                    <div class="card-overlay">
+                        <span class="about-me">About Me</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Name Modal -->
+            <div id="name-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-user"></i> <span class="about-me">About Me</span></h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="name-details">
+                            <div class="profile-image">
+                                <img src="assets/images/profileimage.svg" alt="Burak YALÇIN">
+                            </div>
+                            <h1 class="main-title">Burak YALÇIN</h1>
+                            <p class="subtitle">Computer Science & Engineering Student</p>
+                            <div class="download-buttons">
+                                <a href="assets/CVEnglish.pdf" class="cv-download-btn" download>
+                                    <i class="fas fa-file-download"></i> <span class="download-cv-en">Download CV (EN)</span>
+                                </a>
+                                <a href="assets/CVTürkçe.pdf" class="cv-download-btn" download>
+                                    <i class="fas fa-file-download"></i> <span class="download-cv-tr">Download CV (TR)</span>
+                                </a>
+                                <a href="assets/PortfolioEnglish.pdf" class="cv-download-btn portfolio-btn" download>
+                                    <i class="fas fa-book"></i> <span class="download-portfolio-en">Download Portfolio (EN)</span>
+                                </a>
+                                <a href="assets/Portfolyo Türkçe.pdf" class="cv-download-btn portfolio-btn" download>
+                                    <i class="fas fa-book"></i> <span class="download-portfolio-tr">Download Portfolio (TR)</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="about-content">
+                            <div class="about-section">
+                                <h3><span class="who-i-am">Who I Am</span></h3>
+                                <p><span class="who-i-am-text">I am a Computer Science & Engineering student with a passion for creating innovative solutions through technology. My focus areas include Software Engineering, Artificial Intelligence, and Full-Stack Development. In my free time, I enjoy writing poetry and song lyrics. </span><a href="https://creative.yalcinburak.com" target="_blank" class="creative-link"><span class="creative-works-link">You can find my creative works in the Creative Works section.</span></a></p>
+                            </div>
+
+                            <div class="about-section">
+                                <h3 class="what-i-do">What I Do</h3>
+                                <div class="about-grid">
+                                    <div class="about-item">
+                                        <i class="fas fa-code"></i>
+                                        <h4 class="software-dev">Software Development</h4>
+                                        <p class="software-dev-desc">Building scalable and efficient applications using modern technologies and best practices.</p>
+                                    </div>
+                                    <div class="about-item">
+                                        <i class="fas fa-robot"></i>
+                                        <h4 class="ai-dev">AI Development</h4>
+                                        <p class="ai-dev-desc">Creating intelligent solutions using machine learning and artificial intelligence.</p>
+                                    </div>
+                                    <div class="about-item">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <h4 class="fullstack-dev">Full-Stack Development</h4>
+                                        <p class="fullstack-dev-desc">Developing end-to-end web applications with modern frameworks and tools.</p>
+                                    </div>
+                                    <div class="about-item">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <h4 class="mobile-dev">Mobile Development</h4>
+                                        <p class="mobile-dev-desc">Building cross-platform mobile applications for iOS and Android.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-section">
+                                <h3 class="my-approach">My Approach</h3>
+                                <ul class="about-list">
+                                    <li><i class="fas fa-check-circle"></i> <span class="approach-1">Focus on writing clean, maintainable code</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="approach-2">Emphasis on user experience and performance</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="approach-3">Continuous learning and staying up-to-date with technology</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="approach-4">Strong problem-solving and analytical skills</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="about-section">
+                                <h3 class="personal-interests">Personal Interests</h3>
+                                <p class="personal-interests-text">Beyond coding, I'm passionate about technology, innovation, and continuous learning. I enjoy contributing to open-source projects, writing technical articles, and sharing knowledge with the developer community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Card -->
+            <div class="card experience-card" data-aos="fade-up" data-aos-delay="200" data-modal="experience-modal">
+                <div class="card-body">
+                    <h2 class="experience">Experience</h2>
+                    <div class="experience-preview">
+                        <div class="experience-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <p class="preview-text view-journey">View my professional journey</p>
+                    </div>
+                    <div class="card-overlay">
+                        <span class="view-journey">Click to see more</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Card -->
+            <div class="card education-card" data-aos="fade-up" data-aos-delay="300" data-modal="education-modal">
+                <div class="card-body">
+                    <h2 class="education">Education</h2>
+                    <div class="education-preview">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <p class="preview-text view-education">Explore my academic background</p>
+                    </div>
+                    <div class="card-overlay">
+                        <span class="view-education">Click to see more</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Card -->
+            <div class="card skills-card" data-aos="fade-up" data-aos-delay="400" data-modal="skills-modal">
+                <div class="card-body">
+                    <h2 class="skills">Skills</h2>
+                    <div class="skills-preview">
+                        <div class="skills-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <p class="preview-text view-skills">Discover my technical expertise</p>
+                    </div>
+                    <div class="card-overlay">
+                        <span class="view-skills">Click to see more</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Card -->
+            <div class="card projects-card" data-aos="fade-up" data-aos-delay="500" data-modal="projects-modal">
+                <div class="card-body">
+                    <h2 class="projects">Projects</h2>
+                    <div class="projects-preview">
+                        <div class="projects-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <p class="preview-text view-projects">Check out my latest work</p>
+                    </div>
+                    <div class="card-overlay">
+                        <span class="view-projects">Click to see more</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card -->
+            <div class="card blog-card" data-aos="fade-up" data-aos-delay="650" data-modal="blog-modal">
+                <div class="card-body">
+                    <h2 class="blog">Blog</h2>
+                    <div class="blog-preview">
+                        <div class="blog-icon">
+                            <i class="fab fa-medium"></i>
+                        </div>
+                        <p class="view-blog">Read my latest articles</p>
+                    </div>
+                    <div class="card-overlay">
+                        <span class="view-blog">Click to see more</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact & Social Media Card -->
+            <div class="card contact-social-card" data-aos="fade-up" data-aos-delay="600" data-modal="contact-social-modal">
+                <div class="card-body">
+                    <h2 class="contact-social">Contact & Social</h2>
+                    <div class="contact-preview">
+                        <div class="contact-social-icons">
+                            <div class="icon-circle">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="social-icons-group">
+                                <div class="icon-circle">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="icon-circle">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="icon-circle">
+                                    <i class="fab fa-medium"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="preview-text connect">Let's connect and collaborate!</p>
+                    </div>
+                    <div class="card-overlay">
+                        <span class="connect">Click to see more</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme Toggle Card -->
+            <div class="card theme-card" data-aos="fade-up" data-aos-delay="750">
+                <div class="card-body">
+                    <h2 class="theme-title">Theme</h2>
+                    <div class="theme-preview">
+                        <div class="theme-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <p class="preview-text theme-text">Switch between light & dark</p>
+                    </div>
+                    <div class="theme-toggle">
+                        <div class="theme-switch">
+                            <input type="checkbox" id="theme-toggle" class="theme-input">
+                            <label for="theme-toggle" class="theme-label">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Language Toggle Card -->
+            <div class="card language-card" data-aos="fade-up" data-aos-delay="775">
+                <div class="card-body">
+                    <h2 class="language-title">Language</h2>
+                    <div class="language-preview">
+                        <div class="language-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <p class="preview-text language-text">Switch between TR & EN</p>
+                    </div>
+                    <div class="language-toggle">
+                        <div class="language-switch">
+                            <input type="checkbox" id="language-toggle" class="language-input">
+                            <label for="language-toggle" class="language-label">
+                                <span class="lang-text">EN</span>
+                                <span class="lang-text">TR</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ChatBOT Card -->
+            <div class="card chatbot-card" data-aos="fade-up" data-aos-delay="800" data-modal="chatbot-modal">
+                <div class="card-body">
+                    <h2 class="chatbot-title">ChatBOT</h2>
+                    <div class="chatbot-preview">
+                        <div class="chatbot-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <p class="preview-text">AI-powered assistant</p>
+                    </div>
+                    <div class="card-overlay">
+                        <span>Click to see more</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modals -->
+        <div class="modal-container">
+            <!-- Name Modal -->
+            <div id="name-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Welcome!</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="name-details">
+                            <div class="profile-image">
+                                <img src="assets/images/profileimage.svg" alt="Burak YALÇIN" width="150" height="150">
+                            </div>
+                            <h1 class="main-title">Burak YALÇIN</h1>
+                            <p class="subtitle">Software Engineer & AI Developer</p>
+                            <p class="intro-text">Hi there! I create scalable, efficient solutions that combine technology and creativity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Modal -->
+            <div id="about-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-user"></i> About Me</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="about-content">
+                            <div class="about-section">
+                                <h3>Who I Am</h3>
+                                <p>I am a Computer Science & Engineering student with a passion for creating innovative solutions through technology. My focus areas include Software Engineering, Artificial Intelligence, and Full-Stack Development.</p>
+                            </div>
+
+                            <div class="about-section">
+                                <h3>What I Do</h3>
+                                <div class="about-grid">
+                                    <div class="about-item">
+                                        <i class="fas fa-code"></i>
+                                        <h4>Software Development</h4>
+                                        <p>Building scalable and efficient applications using modern technologies and best practices.</p>
+                                    </div>
+                                    <div class="about-item">
+                                        <i class="fas fa-robot"></i>
+                                        <h4>AI Development</h4>
+                                        <p>Creating intelligent solutions using machine learning and artificial intelligence.</p>
+                                    </div>
+                                    <div class="about-item">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <h4>Full-Stack Development</h4>
+                                        <p>Developing end-to-end web applications with modern frameworks and tools.</p>
+                                    </div>
+                                    <div class="about-item">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <h4>Mobile Development</h4>
+                                        <p>Building cross-platform mobile applications for iOS and Android.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-section">
+                                <h3>My Approach</h3>
+                                <ul class="about-list">
+                                    <li><i class="fas fa-check-circle"></i> Focus on writing clean, maintainable code</li>
+                                    <li><i class="fas fa-check-circle"></i> Emphasis on user experience and performance</li>
+                                    <li><i class="fas fa-check-circle"></i> Continuous learning and staying up-to-date with technology</li>
+                                    <li><i class="fas fa-check-circle"></i> Strong problem-solving and analytical skills</li>
+                                </ul>
+                            </div>
+
+                            <div class="about-section">
+                                <h3>Personal Interests</h3>
+                                <p>Beyond coding, I'm passionate about technology, innovation, and continuous learning. I enjoy contributing to open-source projects, writing technical articles, and sharing knowledge with the developer community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Modal -->
+            <div id="experience-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="experience-timeline">
+                            <!-- T Foundation -->
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h3 class="t3-title">T3 Vakfı</h3>
+                                    <span class="duration">February 2024 - Present</span>
+                                </div>
+                                <div class="role">
+                                    <h4 class="t3-role">Eğitmen, Mentor</h4>
+                                    <p class="t3-desc">Contributed to middle and high school students gaining basic and advanced technical skills by providing engineering training. Developed STEM-focused projects to help students gain problem-solving, analytical thinking, and teamwork skills. Mentored students in robotics, artificial intelligence, programming, and industrial production, guiding them through project-based learning processes.</p>
+                                </div>
+                            </div>
+
+                            <!-- HUAWEI -->
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h3 class="huawei-title">HUAWEI Student Developers</h3>
+                                    <span class="duration">March 2024 - February 2025</span>
+                                </div>
+                                <div class="role">
+                                    <h4 class="huawei-role">Başkan Yardımcısı</h4>
+                                    <p class="huawei-desc">Managing and organizing the activities of the Huawei Student Developers community at Akdeniz University.</p>
+                                </div>
+                            </div>
+
+                            <!-- 3Y -->
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h3 class="3y-title">Akdeniz Yazılım, Yapay Zeka ve Yaratıcılık Topluluğu (3Y)</h3>
+                                    <span class="duration">October 2023 - Present</span>
+                                </div>
+                                <div class="role">
+                                    <h4 class="3y-role">Yönetim Kurulu Başkanı</h4>
+                                    <p class="3y-desc">Founded by Computer Engineering students under the leadership of Akdeniz University Faculty of Engineering Dean\'s Office. The community aims to contribute to both brands and students by organizing trainings, seminars, promotions, brand collaborations, summits, and competitions.</p>
+                                </div>
+                            </div>
+
+                            <!-- BİLMÖK -->
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h3 class="bilmok-title">BİLMÖK</h3>
+                                    <span class="duration">May 2024 - February 2025</span>
+                                </div>
+                                <div class="role">
+                                    <h4 class="bilmok-role">Organizasyon Komitesi Başkan Yardımcısı</h4>
+                                    <p class="bilmok-desc">The 21st Computer Engineering Students Congress (BILMOK) was held in Antalya in 2025, hosted by 3Y. Students, academics, and industry representatives from more than 50 universities shared their knowledge and experiences at the congress, where topics such as artificial intelligence, cybersecurity, software development, and technology ethics were discussed.</p>
+                                </div>
+                            </div>
+
+                            <!-- UBMK -->
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h3 class="ubmk-title">UBMK</h3>
+                                    <span class="duration">2024</span>
+                                </div>
+                                <div class="role">
+                                    <h4 class="ubmk-role">Organisation Officer</h4>
+                                    <p class="ubmk-desc">Organizing committee member for UBMK conference in Antalya.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Modal -->
+            <div id="education-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="education-timeline">
+                            <!-- Akdeniz University -->
+                            <div class="education-item">
+                                <div class="education-header">
+                                    <h3 class="education-title">Akdeniz University</h3>
+                                    <span class="duration">September 2022 - Present</span>
+                                </div>
+                                <div class="education-details">
+                                    <h4><span class="education-degree">Bachelor's Degree</span>, <span class="education-field">Computer Science & Engineering</span></h4>
+                                    <p class="education-location"><i class="fas fa-map-marker-alt"></i> <span>Antalya, Türkiye</span></p>
+                                    <p class="education-gpa"><i class="fas fa-graduation-cap"></i> <span>GPA: 3.50</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Projects -->
+                            <div class="education-section">
+                                <h3 class="projects-section">Projects</h3>
+                                
+                                <!-- TUBITAK Project -->
+                                <div class="project-item">
+                                    <div class="project-header">
+                                        <h4 class="tubitak-title">TUBITAK 2209-A Project Coordinator</h4>
+                                        <span class="duration">2024</span>
+                                    </div>
+                                    <p class="tubitak-desc">Developed a smart irrigation system using sensors and AI algorithms to monitor soil in real-time, optimizing water use and crop health. Integrating aeropod technology ensured precise measurements and efficient irrigation.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Raspberry Pi</span>
+                                        <span class="tech-tag">Arduino</span>
+                                        <span class="tech-tag">Flask</span>
+                                        <span class="tech-tag">AI Model Tuning</span>
+                                    </div>
+                                </div>
+
+                                <!-- Fibonacci Project -->
+                                <div class="project-item">
+                                    <div class="project-header">
+                                        <h4 class="fibonacci-title">Fibonacci Catalan Lattice Paths</h4>
+                                    </div>
+                                    <p class="fibonacci-desc">Used Python to analyze lattice paths with discrete mathematics and generating functions, exploring relationships among Fibonacci, Catalan, and Motzkin numbers, and their applications.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Scientific Computing</span>
+                                        <span class="tech-tag">Data Visualization</span>
+                                    </div>
+                                </div>
+
+                                <!-- AI Lyrics Player -->
+                                <div class="project-item">
+                                    <div class="project-header">
+                                        <h4 class="lyrics-title">AI-Powered Lyrics Synchronization Player</h4>
+                                    </div>
+                                    <p class="lyrics-desc">Developed a Python-based application that synchronizes song lyrics with MP3 playback using OpenAI Whisper and VLC Media Player. Integrated NLP and time-synchronization algorithms for real-time lyric display.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">OpenAI Whisper</span>
+                                        <span class="tech-tag">VLC Media Player</span>
+                                        <span class="tech-tag">NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certificates -->
+                            <div class="education-section">
+                                <h3 class="certificates-title">Certificates</h3>
+                                <ul class="certificate-list">
+                                    <li>UBMK 2024</li>
+                                    <li>Erasmus+ KA 154</li>
+                                    <li>Tübitak 2209A</li>
+                                    <li>Java</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Modal -->
+            <div id="skills-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-code"></i> Skills</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="skills-content">
+                            <!-- Development Skills -->
+                            <div class="skills-section">
+                                <h3><i class="fas fa-laptop-code"></i> Development</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <i class="fab fa-python"></i>
+                                        <h4>Python</h4>
+                                        <p>Scientific computing, AI development, data analysis</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fab fa-java"></i>
+                                        <h4>Java</h4>
+                                        <p>Object-oriented programming, application development</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fab fa-windows"></i>
+                                        <h4>C#</h4>
+                                        <p>Desktop applications, software development</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Web Technologies -->
+                            <div class="skills-section">
+                                <h3><i class="fas fa-globe"></i> Web Technologies</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <i class="fab fa-html5"></i>
+                                        <h4>HTML</h4>
+                                        <p>Semantic markup, responsive design</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fab fa-css3-alt"></i>
+                                        <h4>CSS</h4>
+                                        <p>Styling, animations, layouts</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fab fa-angular"></i>
+                                        <h4>Angular</h4>
+                                        <p>TypeScript, component-based development</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- AI & Design -->
+                            <div class="skills-section">
+                                <h3><i class="fas fa-brain"></i> AI & Design</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <i class="fas fa-robot"></i>
+                                        <h4>AI Prompting</h4>
+                                        <p>LLM optimization, prompt engineering</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fas fa-palette"></i>
+                                        <h4>Graphic Design</h4>
+                                        <p>Visual design, branding, UI/UX</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Languages -->
+                            <div class="skills-section">
+                                <h3><i class="fas fa-language"></i> Languages</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <i class="fas fa-flag"></i>
+                                        <h4>English</h4>
+                                        <p>Proficient</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fas fa-flag"></i>
+                                        <h4>Turkish</h4>
+                                        <p>Native</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Modal -->
+            <div id="projects-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-code-branch"></i> Projects</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="projects-timeline">
+                            <div id="github-projects">
+                                <div class="loading-spinner">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Loading projects...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Modal -->
+            <div id="blog-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>My Blog Posts</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="medium-posts" class="blog-grid">
+                            <div class="loading-spinner">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                Loading blog posts...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact & Social Modal -->
+            <div id="contact-social-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-address-card"></i> Contact & Social Media</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-info">
+                                    <h4>Email</h4>
+                                    <a href="mailto:burakyalcin.4510@gmail.com">burakyalcin.4510@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-info">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+905070833794">+90 507 083 37 94</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-info">
+                                    <h4>Location</h4>
+                                    <span>Antalya, Türkiye</span>
+                                </div>
+                            </div>
+                            <div class="social-grid">
+                                <a href="https://github.com/burakyalcin10" target="_blank" class="social-item">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                    <p>Check out my code repositories and contributions</p>
+                                </a>
+                                <a href="https://linkedin.com/in/burakyalcin4510" target="_blank" class="social-item">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                    <p>Connect with me professionally</p>
+                                </a>
+                                <a href="https://yalcinburak.com" target="_blank" class="social-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Portfolio</span>
+                                    <p>Visit my personal website</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ChatBOT Modal -->
+            <div id="chatbot-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-robot"></i> Ateş - AI Asistan</h2>
+                        <div class="modal-actions">
+                            <a href="chat-history.html" class="history-link" title="Sohbet Geçmişi">
+                                <i class="fas fa-history"></i>
+                            </a>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="chat-container">
+                            <div id="chat-messages" class="chat-messages"></div>
+                            <div class="chat-input">
+                                <input type="text" id="message-input" placeholder="Mesajınızı yazın...">
+                                <button id="send-message">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Language Switch Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageToggle = document.getElementById('language-toggle');
+            const translations = {
+                'en': {
+                    'main-title': 'Burak YALÇIN',
+                    'subtitle': 'Computer Science & Engineering Student',
+                    'about-me': 'About Me',
+                    'who-i-am': 'Who I Am',
+                    'who-i-am-text': 'I am a Computer Science & Engineering student with a passion for creating innovative solutions through technology. My focus areas include Software Engineering, Artificial Intelligence, and Full-Stack Development. In my free time, I enjoy writing poetry and song lyrics.',
+                    'creative-works-link': ' You can find my creative works here.',
+                    'what-i-do': 'What I Do',
+                    'my-approach': 'My Approach',
+                    'personal-interests': 'Personal Interests',
+                    'experience': 'Experience',
+                    'education': 'Education',
+                    'skills': 'Skills',
+                    'projects': 'Projects',
+                    'blog': 'Blog',
+                    'contact-social': 'Contact & Social',
+                    'profile-text': 'I am a Computer Science & Engineering student with a passion for creating innovative solutions through technology. My focus areas include Software Engineering, Artificial Intelligence, and Full-Stack Development.',
+                    'software-dev': 'Software Development',
+                    'software-dev-desc': 'Building scalable and efficient applications using modern technologies and best practices.',
+                    'ai-dev': 'AI Development',
+                    'ai-dev-desc': 'Creating intelligent solutions using machine learning and artificial intelligence.',
+                    'fullstack-dev': 'Full-Stack Development',
+                    'fullstack-dev-desc': 'Developing end-to-end web applications with modern frameworks and tools.',
+                    'mobile-dev': 'Mobile Development',
+                    'mobile-dev-desc': 'Building cross-platform mobile applications for iOS and Android.',
+                    'view-journey': 'View my professional journey',
+                    'view-education': 'Explore my academic background',
+                    'view-skills': 'Discover my technical expertise',
+                    'view-projects': 'Check out my latest work',
+                    'view-blog': 'Read my latest articles',
+                    'connect': 'Let\'s connect and collaborate!',
+                    'welcome': 'Welcome!',
+                    't3-title': 'T3 Foundation',
+                    't3-role': 'Educator, Mentor',
+                    't3-desc': 'Contributed to middle and high school students gaining basic and advanced technical skills by providing engineering training. Developed STEM-focused projects to help students gain problem-solving, analytical thinking, and teamwork skills. Mentored students in robotics, artificial intelligence, programming, and industrial production, guiding them through project-based learning processes.',
+                    'huawei-title': 'HUAWEI Student Developers',
+                    'huawei-role': 'Vice President',
+                    'huawei-desc': 'Managing and organizing the activities of the Huawei Student Developers community at Akdeniz University.',
+                    '3y-title': 'Akdeniz Software, AI and Creativity Community (3Y)',
+                    '3y-role': 'Chairman of the Board',
+                    '3y-desc': 'Founded by Computer Engineering students under the leadership of Akdeniz University Faculty of Engineering Dean\'s Office. The community aims to contribute to both brands and students by organizing trainings, seminars, promotions, brand collaborations, summits, and competitions.',
+                    'bilmok-title': 'BILMOK',
+                    'bilmok-role': 'Vice President of Organization Committee',
+                    'bilmok-desc': 'The 21st Computer Engineering Students Congress (BILMOK) was held in Antalya in 2025, hosted by 3Y. Students, academics, and industry representatives from more than 50 universities shared their knowledge and experiences at the congress, where topics such as artificial intelligence, cybersecurity, software development, and technology ethics were discussed.',
+                    'ubmk-title': 'UBMK',
+                    'ubmk-role': 'Organisation Officer',
+                    'ubmk-desc': 'Organizing committee member for UBMK conference in Antalya.',
+                    'education-title': 'Akdeniz University',
+                    'education-degree': 'Bachelor\'s Degree',
+                    'education-field': 'Computer Science & Engineering',
+                    'projects-section': 'Projects',
+                    'tubitak-title': 'TUBITAK 2209-A Project Coordinator',
+                    'tubitak-desc': 'Developed a smart irrigation system using sensors and AI algorithms to monitor soil in real-time, optimizing water use and crop health. Integrating aeropod technology ensured precise measurements and efficient irrigation.',
+                    'fibonacci-title': 'Fibonacci Catalan Lattice Paths',
+                    'fibonacci-desc': 'Used Python to analyze lattice paths with discrete mathematics and generating functions, exploring relationships among Fibonacci, Catalan, and Motzkin numbers, and their applications.',
+                    'lyrics-title': 'AI-Powered Lyrics Synchronization Player',
+                    'lyrics-desc': 'Developed a Python-based application that synchronizes song lyrics with MP3 playback using OpenAI Whisper and VLC Media Player. Integrated NLP and time-synchronization algorithms for real-time lyric display.',
+                    'certificates-title': 'Certificates',
+                    'download-cv-en': 'Download CV (EN)',
+                    'download-cv-tr': 'Download CV (TR)',
+                    'download-portfolio-en': 'Download Portfolio (EN)',
+                    'download-portfolio-tr': 'Download Portfolio (TR)'
+                },
+                'tr': {
+                    'main-title': 'Burak YALÇIN',
+                    'subtitle': 'Bilgisayar Mühendisliği Öğrencisi',
+                    'about-me': 'Hakkımda',
+                    'who-i-am': 'Ben Kimim',
+                    'who-i-am-text': 'Bilgisayar Mühendisliği 2.sınıf öğrencisiyim ve teknolojik gelişmeleri yakından takip ederek kendimi sürekli geliştirmeyi hedefliyorum. Öğrenme sürecimde öğrendiklerimi projelerde uygulamaya ve büyük organizasyonlarda aktif rol almaya özen gösteriyorum. Boş zamanlarımda şiir ve şarkı sözü yazmayı severim.',
+                    'creative-works-link': ' Yaratıcı çalışmalarıma buradan ulaşabilirsiniz.',
+                    'what-i-do': 'Ne Yapıyorum',
+                    'my-approach': 'Yaklaşımım',
+                    'personal-interests': 'Kişisel İlgi Alanlarım',
+                    'experience': 'Deneyim',
+                    'education': 'Eğitim',
+                    'skills': 'Beceriler',
+                    'projects': 'Projeler',
+                    'blog': 'Blog',
+                    'contact-social': 'İletişim & Sosyal Medya',
+                    'profile-text': 'Bilgisayar Mühendisliği 2.sınıf öğrencisiyim ve teknolojik gelişmeleri yakından takip ederek kendimi sürekli geliştirmeyi hedefliyorum. Öğrenme sürecimde öğrendiklerimi projelerde uygulamaya ve büyük organizasyonlarda aktif rol almaya özen gösteriyorum. Odaklandığım alanlar arasında Yazılım Mühendisliği, Yapay Zeka ve Full-Stack Development yer alıyor.',
+                    'software-dev': 'Yazılım Geliştirme',
+                    'software-dev-desc': 'Modern teknolojiler ve en iyi uygulamalarla ölçeklenebilir ve verimli uygulamalar geliştirme.',
+                    'ai-dev': 'Yapay Zeka Geliştirme',
+                    'ai-dev-desc': 'Makine öğrenimi ve yapay zeka kullanarak akıllı çözümler oluşturma.',
+                    'fullstack-dev': 'Full-Stack Geliştirme',
+                    'fullstack-dev-desc': 'Modern framework ve araçlarla uçtan uca web uygulamaları geliştirme.',
+                    'mobile-dev': 'Mobil Geliştirme',
+                    'mobile-dev-desc': 'iOS ve Android için çapraz platform mobil uygulamalar geliştirme.',
+                    'view-journey': 'Profesyonel yolculuğumu görüntüle',
+                    'view-education': 'Akademik geçmişimi keşfet',
+                    'view-skills': 'Teknik uzmanlığımı keşfet',
+                    'view-projects': 'Son çalışmalarımı incele',
+                    'view-blog': 'Son yazılarımı oku',
+                    'connect': 'Haydi bağlantı kuralım ve işbirliği yapalım!',
+                    'welcome': 'Hoş Geldiniz!',
+                    't3-title': 'T3 Vakfı',
+                    't3-role': 'Eğitmen, Mentor',
+                    't3-desc': 'Ortaokul ve lise öğrencilerine mühendislik alanında eğitimler vererek temel ve ileri teknik beceriler kazandırdım. STEM odaklı projeler geliştirerek öğrencilere problem çözme, analitik düşünme ve takım çalışması becerileri kazandırdım. Robotik, yapay zeka, programlama ve endüstriyel üretim konularında öğrencilere mentorluk yaparak proje tabanlı öğrenme süreçlerinde öğrencilere rehberlik ettim.',
+                    'huawei-title': 'HUAWEI Student Developers',
+                    'huawei-role': 'Başkan Yardımcısı',
+                    'huawei-desc': 'Akdeniz Üniversitesi\'nde Huawei Student Developers topluluğunun faaliyetlerini yönetme ve organize etme.',
+                    '3y-title': 'Akdeniz Yazılım, Yapay Zeka ve Yaratıcılık Topluluğu (3Y)',
+                    '3y-role': 'Yönetim Kurulu Başkanı',
+                    '3y-desc': 'Akdeniz Üniversitesi Mühendislik Fakültesi Dekanlığı öncülüğünde Bilgisayar Mühendisliği öğrencileri tarafından kurulmuştur. Topluluk, eğitimler, seminerler, tanıtımlar, marka işbirlikleri, zirveler ve yarışmalar düzenleyerek hem markalara hem de öğrencilere katkı sağlamayı hedefliyor.',
+                    'bilmok-title': 'BİLMÖK',
+                    'bilmok-role': 'Organizasyon Komitesi Başkan Yardımcısı',
+                    'bilmok-desc': '21. Bilgisayar Mühendisliği Öğrencileri Kongresi (BİLMÖK) 2025 yılında 3Y\'nin ev sahipliğinde Antalya\'da gerçekleştirildi. Yapay zekâ, siber güvenlik, yazılım geliştirme ve teknoloji etiği gibi konuların tartışıldığı kongrede 50\'den fazla üniversiteden öğrenci, akademisyen ve sektör temsilcileri bilgi ve deneyimlerini paylaştı.',
+                    'education-title': 'Akdeniz Üniversitesi',
+                    'education-degree': 'Lisans Derecesi',
+                    'education-field': 'Bilgisayar Bilimi ve Mühendisliği',
+                    'education-location': 'Antalya, Türkiye',
+                    'education-gpa': 'GPA: 3.50',
+                    'projects-section': 'Projeler',
+                    'tubitak-title': 'TÜBİTAK 2209-A Proje Koordinatörü',
+                    'tubitak-desc': 'Sensörler ve yapay zeka algoritmaları kullanarak toprağı gerçek zamanlı izleyen, su kullanımını ve bitki sağlığını optimize eden akıllı sulama sistemi geliştirdik. Aeropod teknolojisini entegre ederek hassas ölçümler ve verimli sulama sağladım.',
+                    'fibonacci-title': 'Fibonacci Catalan Kafes Yolları',
+                    'fibonacci-desc': 'Ayrık matematik ve üreteç fonksiyonları kullanarak kafes yollarını analiz ettim, Fibonacci, Catalan ve Motzkin sayıları arasındaki ilişkileri ve uygulamalarını inceledim.',
+                    'lyrics-title': 'Yapay Zeka Destekli Şarkı Sözü Senkronizasyon Oynatıcısı',
+                    'lyrics-desc': 'OpenAI Whisper ve VLC Media Player kullanarak şarkı sözlerini MP3 çalma ile senkronize eden Python tabanlı bir uygulama geliştirdim. Gerçek zamanlı şarkı sözü gösterimi için NLP ve zaman senkronizasyon algoritmaları entegre ettim.',
+                    'certificates-title': 'Sertifikalar',
+                    'ubmk-title': 'UBMK',
+                    'ubmk-role': 'Organizasyon Görevlisi',
+                    'ubmk-desc': 'Antalya\'da düzenlenen UBMK konferansının organizasyon komitesi üyesi.',
+                    'download-cv-en': 'CV İndir (EN)',
+                    'download-cv-tr': 'CV İndir (TR)',
+                    'download-portfolio-en': 'Portfolyo İndir (EN)',
+                    'download-portfolio-tr': 'Portfolyo İndir (TR)'
+                }
+            };
+
+            // Dil değiştirme fonksiyonu
+            function changeLanguage(language) {
+                console.log('Changing language to:', language);
+                document.documentElement.lang = language;
+                
+                Object.entries(translations[language]).forEach(([key, value]) => {
+                    const elements = document.getElementsByClassName(key);
+                    Array.from(elements).forEach(element => {
+                        console.log('Updating element:', key, value);
+                        element.textContent = value;
+                    });
+                });
+
+                localStorage.setItem('language', language);
+            }
+
+            // Dil değiştirme olayını dinle
+            languageToggle.addEventListener('change', (e) => {
+                const language = e.target.checked ? 'tr' : 'en';
+                console.log('Toggle changed to:', language);
+                changeLanguage(language);
+            });
+
+            // Sayfa yüklendiğinde dil ayarını kontrol et
+            const savedLanguage = localStorage.getItem('language') || 'en';
+            languageToggle.checked = savedLanguage === 'tr';
+            changeLanguage(savedLanguage);
+        });
+    </script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
