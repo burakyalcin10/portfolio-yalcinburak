@@ -1,0 +1,17 @@
+{
+    "name": "Yahya Efe Kuruçay Portfolio",
+    "short_name": "Efe Kuruçay",
+    "description": "Software Engineer & AI Developer Portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0984e3",
+    "icons": [
+        {
+            "src": "assets/images/logo.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+} 
