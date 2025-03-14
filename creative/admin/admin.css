@@ -1,0 +1,71 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #343a40;
+    color: white;
+}
+
+.table th {
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-spotify {
+    background-color: #1DB954;
+    color: white;
+}
+
+.btn-spotify:hover {
+    background-color: #1ed760;
+    color: white;
+}
+
+.table-responsive {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.modal-header {
+    background-color: #343a40;
+    color: white;
+}
+
+.modal-header .btn-close {
+    color: white;
+}
+
+#errorMessage {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger {
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    transform: scale(1.05);
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.preview-text {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} 

@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #00b894;
+    --secondary-color: #2ecc71;
+    --text-color: #2d3436;
+    --background-color: #f6f8ff;
+    --card-background: #ffffff;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --primary-color: #2ecc71;
+    --secondary-color: #00b894;
+    --text-color: #ecf0f1;
+    --background-color: #1a1a1a;
+    --card-background: #2d3436;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--card-background);
+    box-shadow: var(--card-shadow);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.nav-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section Styles */
+.section {
+    padding: 4rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2d3436;
+    text-align: center;
+}
+
+/* Creative Grid */
+.creative-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Card Styles */
+.creative-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.creative-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.creative-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+}
+
+.creative-card .date {
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-bottom: 1rem;
+}
+
+.preview-text {
+    font-size: 1rem;
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Buton stili */
+.read-more {
+    background: #00b894;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.read-more:hover {
+    background: #00a884;
+}
+
+/* Modal stili */
+.modal-content {
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid #e9ecef;
+    padding: 1.5rem;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: #2d3436;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.poem-text, .lyrics-text {
+    white-space: pre-line;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #2d3436;
+}
+
+/* Footer */
+footer {
+    background: var(--card-background);
+    color: var(--text-color);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+    box-shadow: var(--card-shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .creative-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card-content {
+        padding: 1rem;
+    }
+} 
